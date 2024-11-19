@@ -22,14 +22,6 @@ jobs:
         with:
           node-version: '18'
 
-      - name: Install Prettier
-        run: |
-          npm install -g prettier
-
-      - name: Format with Prettier
-        run: |
-          prettier --write public/data/meet-the-talent.json
-
       - name: json-yaml-validate
         id: json-yaml-validate
         uses: GrantBirki/json-yaml-validate@v3.2.1
@@ -40,6 +32,14 @@ jobs:
             public/data/meet-the-talent.json
           use_gitignore: false
           ajv_strict_mode: false
+      - name: Install Prettier
+        run: |
+          npm install -g prettier
+
+      - name: Format with Prettier
+        run: |
+          prettier --write public/data/meet-the-talent.json
+
 
       - name: Commit changes
         if: ${{ steps.json-yaml-validate.outcome == 'success' }}
