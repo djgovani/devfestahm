@@ -1,20 +1,15 @@
-# This is a basic workflow to help you get started with Actions
-
 name: CI
 
-# Controls when the workflow will run
 on:
-  # Triggers the workflow on push or pull request events but only for the "develop" branch
   pull_request:
     branches: ["develop"]
     paths:
       - 'public/data/meet-the-talent.json'
-  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
 permissions:
-    contents: read
-    pull-requests: write # enable write permissions for pull request comments
+  contents: read
+  pull-requests: write
 
 jobs:
   json-yaml-validate:
@@ -22,13 +17,37 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
       - name: json-yaml-validate
         id: json-yaml-validate
-        uses: GrantBirki/json-yaml-validate@v3.2.1 # replace with the latest version
+        uses: GrantBirki/json-yaml-validate@v3.2.1
         with:
-          comment: "true" # enable comment mode
+          comment: "true"
           json_schema: public/data/schema/meet-the-talent-schema.json
           files: |
             public/data/meet-the-talent.json
           use_gitignore: false
           ajv_strict_mode: false
+      - name: Install Prettier
+        run: |
+          npm install -g prettier
+
+      - name: Format with Prettier
+        run: |
+          prettier --write public/data/meet-the-talent.json
+
+
+      - name: Commit changes
+        if: ${{ steps.json-yaml-validate.outcome == 'success' }}
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add public/data/meet-the-talent.json
+          git commit -m "Apply Prettier formatting"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
