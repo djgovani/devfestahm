@@ -8,7 +8,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
   pull-requests: write
 
 jobs:
@@ -16,6 +16,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          # Check out the source branch (the branch from the fork)
+          ref: ${{ github.event.pull_request.head.ref }}
+          repository: ${{ github.event.pull_request.head.repo.full_name }}
 
       - name: Install Node.js
         uses: actions/setup-node@v3
@@ -32,6 +36,7 @@ jobs:
             public/data/meet-the-talent.json
           use_gitignore: false
           ajv_strict_mode: false
+
       - name: Install Prettier
         run: |
           npm install -g prettier
@@ -40,7 +45,6 @@ jobs:
         run: |
           prettier --write public/data/meet-the-talent.json
 
-
       - name: Commit changes
         if: ${{ steps.json-yaml-validate.outcome == 'success' }}
         run: |
@@ -48,6 +52,6 @@ jobs:
           git config user.email "github-actions@github.com"
           git add public/data/meet-the-talent.json
           git commit -m "Apply Prettier formatting"
-          git push
+          git push origin ${{ github.event.pull_request.head.ref }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
