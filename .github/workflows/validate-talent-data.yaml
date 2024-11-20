@@ -15,18 +15,21 @@ jobs:
   json-yaml-validate:
     runs-on: ubuntu-latest
     steps:
+      # Step 1: Checkout the forked repository and source branch
       - uses: actions/checkout@v4
         with:
-          # Check out the branch from the fork
-          ref: ${{ github.event.pull_request.head.ref }}
+          # Use the fork's repository and branch
           repository: ${{ github.event.pull_request.head.repo.full_name }}
+          ref: ${{ github.event.pull_request.head.ref }}
 
+      # Step 2: Install Node.js
       - name: Install Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '20'
 
-      - name: json-yaml-validate
+      # Step 3: Validate JSON with the schema
+      - name: Validate JSON against schema
         id: json-yaml-validate
         uses: GrantBirki/json-yaml-validate@v3.2.1
         with:
@@ -37,22 +40,24 @@ jobs:
           use_gitignore: false
           ajv_strict_mode: false
 
+      # Step 4: Install Prettier for formatting
       - name: Install Prettier
         run: |
           npm install -g prettier
 
-      - name: Format with Prettier
+      # Step 5: Format JSON file with Prettier
+      - name: Format JSON with Prettier
         run: |
           prettier --write public/data/meet-the-talent.json
 
-      - name: Commit changes
+      # Step 6: Commit and push changes to the forked source branch
+      - name: Commit and Push Changes
         if: ${{ steps.json-yaml-validate.outcome == 'success' }}
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
           git add public/data/meet-the-talent.json
           git commit -m "Apply Prettier formatting"
-          # Push changes to the original branch in the fork
-          git push origin HEAD:${{ github.event.pull_request.head.ref }}
+          git push https://${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.event.pull_request.head.repo.full_name }} HEAD:${{ github.event.pull_request.head.ref }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
