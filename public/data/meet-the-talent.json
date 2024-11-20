@@ -8,14 +8,7 @@
       "phone": "+91-7990139255",
       "imageUrl": "https://i.sstatic.net/H6bdc.jpg?s=256",
       "website": "https://pranaypatel.netlify.app/",
-      "skills": [
-        "Android",
-        "Kotlin",
-        "Flutter",
-        "KotlinMultiPlatform",
-        "Mentoring",
-        "AWS"
-      ],
+      "skills": ["Android", "Kotlin", "Flutter", "KotlinMultiPlatform", "Mentoring", "AWS"],
       "links": [
         {
           "icon": "website",
@@ -47,12 +40,7 @@
       "phone": "+91-8780415854",
       "imageUrl": "https://media.licdn.com/dms/image/v2/D4D03AQGxRAwJb7cH3A/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1730714119842?e=1736380800&v=beta&t=a2fyat_NnQxmqS0zWg3BrpVjmG_4OraBW19EKvSAyyc",
       "website": "",
-      "skills": [
-        "Android",
-        "Flutter",
-        "Gen AI",
-        "Python Automation"
-      ],
+      "skills": ["Android", "Flutter", "Gen AI", "Python Automation"],
       "links": [
         {
           "icon": "website",
@@ -84,11 +72,7 @@
       "phone": "+91-9723925030",
       "imageUrl": "https://media.licdn.com/dms/image/v2/C5603AQE1PclSRRKRTw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1516564166327?e=1736380800&v=beta&t=QlBcfAaui6Szrk1K42mPk2SUx7clEtSRR_LpJ_HOl18",
       "website": "",
-      "skills": [
-        "Android",
-        "Kotlin",
-        "Flutter"
-      ],
+      "skills": ["Android", "Kotlin", "Flutter"],
       "links": [
         {
           "icon": "website",
@@ -120,11 +104,7 @@
       "phone": "+91-7984268169",
       "imageUrl": "https://res.cloudinary.com/daily-now/image/upload/s--_L6xwplo--/f_auto,q_auto/v1700137990/avatars/avatar_yQ0Yyq4SQpV7nCTC0nWSi",
       "website": "https://pratik-bharad.webflow.io/",
-      "skills": [
-        "Android",
-        "Kotlin",
-        "Flutter"
-      ],
+      "skills": ["Android", "Kotlin", "Flutter"],
       "links": [
         {
           "icon": "website",
@@ -194,12 +174,7 @@
       "phone": "+91-8460060106",
       "imageUrl": "https://nhchauhan.dev/assets/images/profile.png",
       "website": "https://nhchauhan.dev/",
-      "skills": [
-        "Project Management",
-        "Scrum Master",
-        "Product Owner",
-        "Program Management"
-      ],
+      "skills": ["Project Management", "Scrum Master", "Product Owner", "Program Management"],
       "links": [
         {
           "icon": "website",
@@ -406,13 +381,7 @@
       "phone": "+91-6353586391",
       "imageUrl": "https://github.com/yesbhautik/yesbhautik/blob/ce20de170527773303b56ec79ff25f420c7c3de7/PP1-yellow.jpg?raw=true",
       "website": "https://yesbhautik.co.in",
-      "skills": [
-        "Business Development",
-        "Cloud",
-        "Full Stack Development",
-        "Go",
-        "R&D"
-      ],
+      "skills": ["Business Development", "Cloud", "Full Stack Development", "Go", "R&D"],
       "links": [
         {
           "icon": "website",
@@ -444,12 +413,7 @@
       "phone": "+91 9016125654",
       "imageUrl": "https://techconnectors.community/profile/mayurgohel/profile.jpg",
       "website": "https://techconnectors.community/profile/mayurgohel",
-      "skills": [
-        "iOS",
-        "Flutter",
-        "Android",
-        "AI/ML"
-      ],
+      "skills": ["iOS", "Flutter", "Android", "AI/ML"],
       "links": [
         {
           "icon": "website",
@@ -481,13 +445,7 @@
       "phone": "+91-9601808779",
       "imageUrl": "https://github.com/user-attachments/assets/4d7073bb-1517-4d8f-9ec5-990009a983f7",
       "website": "https://divyadave.framer.ai/",
-      "skills": [
-        "Flutter",
-        "IoT",
-        "Web apps",
-        "Agile Methodologies",
-        "Cross platform apps"
-      ],
+      "skills": ["Flutter", "IoT", "Web apps", "Agile Methodologies", "Cross platform apps"],
       "links": [
         {
           "icon": "website",
@@ -548,14 +506,7 @@
       "phone": "+91-9327838201",
       "imageUrl": "https://i.ibb.co/K9mbdSn/IMG-20190528-WA0035-modified.png",
       "website": "",
-      "skills": [
-        "Java",
-        "Springboot",
-        "AWS",
-        "Kafka",
-        "Docker",
-        "Microservices"
-      ],
+      "skills": ["Java", "Springboot", "AWS", "Kafka", "Docker", "Microservices"],
       "links": [
         {
           "icon": "website",
@@ -718,13 +669,7 @@
       "phone": "+91-7878501027",
       "imageUrl": "https://cdn3.f-cdn.com/ppic/229252055/logo/32580439/7m4GY/CROPPED_profile_logo_LinkedIn_32580439.jpg",
       "website": "https://xyz.com",
-      "skills": [
-        "React.js",
-        "JavaScript",
-        "Next.js",
-        "TypeScript",
-        "Tailwind CSS"
-      ],
+      "skills": ["React.js", "JavaScript", "Next.js", "TypeScript", "Tailwind CSS"],
       "links": [
         {
           "icon": "website",
@@ -819,36 +764,36 @@
       ]
     },
     {
-  "fullName": "John Deo",
-  "location": "Ahmedabad, India",
-  "bio": "Experienced software developer skilled in AWS, API integration, payment gateways (Stripe), Angular 10+, AngularJs, TypeScript, Vue.js, and JavaScript.",
-  "email": "youremail@domain.com",
-  "phone": "+91-9876543210",
-  "imageUrl": "https://developers.google.com/static/profile/badges/events/community/devfest/2022/discover/badge.svg",
-  "website": "https://xyz.com",
-  "skills": ["Angular", "Android"],
-  "links": [
-    {
-      "icon": "website",
-      "link": "https://xyz.com",
-      "name": "Portfolio"
-    },
-    {
-      "icon": "github",
-      "link": "https://github.com/johndeo",
-      "name": "Github"
-    },
-    {
-      "icon": "linkedin",
-      "link": "https://www.linkedin.com/in/johndeo",
-      "name": "LinkedIn"
-    },
-    {
-      "icon": "twitter",
-      "link": "https://x.com/johndeo",
-      "name": "X/Twitter"
+      "fullName": "John Deo",
+      "location": "Ahmedabad, India",
+      "bio": "Experienced software developer skilled in AWS, API integration, payment gateways (Stripe), Angular 10+, AngularJs, TypeScript, Vue.js, and JavaScript.",
+      "email": "youremail@domain.com",
+      "phone": "+91-9876543210",
+      "imageUrl": "https://developers.google.com/static/profile/badges/events/community/devfest/2022/discover/badge.svg",
+      "website": "https://xyz.com",
+      "skills": ["Angular", "Android"],
+      "links": [
+        {
+          "icon": "website",
+          "link": "https://xyz.com",
+          "name": "Portfolio"
+        },
+        {
+          "icon": "github",
+          "link": "https://github.com/johndeo",
+          "name": "Github"
+        },
+        {
+          "icon": "linkedin",
+          "link": "https://www.linkedin.com/in/johndeo",
+          "name": "LinkedIn"
+        },
+        {
+          "icon": "twitter",
+          "link": "https://x.com/johndeo",
+          "name": "X/Twitter"
+        }
+      ]
     }
-  ]
-}
   ]
 }
